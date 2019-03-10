@@ -2,10 +2,10 @@ import jieba
 import os
 
 class chat_object:
-    def __init__(self,cmd=None,turling=None,turling_key=None):
+    def __init__(self,cmd=None,turing=None,turing_key=None):
         self.cmd=cmd
-        self.turling=turling
-        self.turling_key=turling_key
+        self.turing=turing
+        self.turing_key=turing_key
         
 
 def sex_verify(sex):  # turn 1 or 2 or none to gender

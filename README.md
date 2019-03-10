@@ -57,7 +57,7 @@ To prevent causing chaos, Turing Robot only available for the chats that has bee
 #### Show the activated chats:
 
 ```
-turling list
+turing list
 ```
 
 When someone talk to you or @you in a group, the robot will reply auto automatically.

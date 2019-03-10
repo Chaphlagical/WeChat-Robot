@@ -11,7 +11,7 @@ Dir_init()
 bot=Bot(console_qr=False,cache_path=True)
 bot.enable_puid()
 
-me=chat_object(cmd=[],turling=[],turling_key=Tuling(api_key='d9c69eac59ea4dddb70534bb63d0e712'))
+me=chat_object(cmd=[],turing=[],turing_key=Tuling(api_key='d9c69eac59ea4dddb70534bb63d0e712'))
 
 #user_group=User_Group(bot,bot.groups().search("FLASH无话不谈交流群")[0])
 
@@ -48,32 +48,32 @@ def init(msg):
         elif msg.text == 'cmd list':
             msg.reply(str(me.cmd))
     
-    elif 'turling' in msg.text:
+    elif 'turing' in msg.text:
         
         '''
-        Trigger about turling robot
+        Trigger about turing robot
         '''
         
-        if msg.text == 'turling on':
+        if msg.text == 'turing on':
             
             '''
-            Turn on turling robot mode
-            If the turling robot mode is already enable, switch the terminal
-            Make should only one friend or group can control the turling robot at the same time
+            Turn on turing robot mode
+            If the turing robot mode is already enable, switch the terminal
+            Make should only one friend or group can control the turing robot at the same time
             '''
             
             try:
-                bot.registered.enable(turling_robot)
-                if msg.sender not in me.turling:
-                    me.turling.append(msg.sender)
+                bot.registered.enable(turing_robot)
+                if msg.sender not in me.turing:
+                    me.turing.append(msg.sender)
                 if msg.sender == bot.self:
-                    me.turling.append(msg.receiver)
-                msg.reply('turling enable')
+                    me.turing.append(msg.receiver)
+                msg.reply('turing enable')
             except Exception as e:
                 msg.reply(e)
 
-        elif msg.text == 'turling list':
-            msg.reply(str(me.turling))
+        elif msg.text == 'turing list':
+            msg.reply(str(me.turing))
     
     elif msg.is_at and ('蛤' in msg.text or 'hath' in msg.text):
         '''
@@ -115,7 +115,7 @@ def init(msg):
         elif 'group' in msg.text:
             user_group=User_Group(bot,bot.groups()[0])
             user_group.check(msg)
-        
+
 
 @bot.register(chats=me.cmd,msg_types=TEXT,except_self=False,enabled=False)
 def cmd(msg):
@@ -156,19 +156,19 @@ def cmd(msg):
             msg.reply(e)
            
             
-@bot.register(chats=me.turling,except_self=False,enabled=False)
-def turling_robot(msg):
-    if msg.text=='turling off':
+@bot.register(chats=me.turing,except_self=False,enabled=False)
+def turing_robot(msg):
+    if msg.text=='turing off':
         try:
-            msg.reply('turling disable')
-            if msg.receiver in me.turling:
-                me.turling.remove(msg.receiver)
-            if msg.sender in me.turling:
-                me.turling.remove(msg.sender)
+            msg.reply('turing disable')
+            if msg.receiver in me.turing:
+                me.turing.remove(msg.receiver)
+            if msg.sender in me.turing:
+                me.turing.remove(msg.sender)
         except Exception as e:
             msg.reply(e)
     elif msg.is_at or msg.sender in bot.friends():
-        me.turling_key.do_reply(msg)
+        me.turing_key.do_reply(msg)
     
 
 embed()
