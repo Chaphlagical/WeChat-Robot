@@ -107,6 +107,8 @@ The result will be saved in:
 - ./data/group/[group_name]/avatar
 - ./data/group/[group_name]/Graph/Relationship.html
 
+
+
 ## Solution
 
 ### 1.  Sometimes you may not be able to download file named after  Chinese characters. 
@@ -126,3 +128,6 @@ Edit the second line to:
 value = '%s="%s"' % (name, value.encode('utf-8'))
 ```
 
+## Notice
+
+Everyone can through keywords to control your WeChat robot, so be cautious about your privacy.
