@@ -26,6 +26,12 @@ cmd on
 cmd off
 ```
 
+#### Kill
+
+```
+cmd kill
+```
+
 To prevent causing chaos, command terminal only available for the chats that has been activated.
 
 #### Show the activated chats:
@@ -50,6 +56,12 @@ turing on
 
 ```
 turing off
+```
+
+#### kill:
+
+```
+turing kill
 ```
 
 To prevent causing chaos, Turing Robot only available for the chats that has been activated.
