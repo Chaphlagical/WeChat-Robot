@@ -36,23 +36,23 @@ cmd list
 
 After activating, you can control your computer through WeChat.
 
-## 2. Turling Robot
+## 2. Turing Robot
 
-Based on Turling Robot API (http://www.turingapi.com/), you can turn your WeChat to a chatting robot.
+Based on Turing Robot API (http://www.turingapi.com/), you can turn your WeChat to a chatting robot.
 
 #### Activate: 
 
 ```
-turling on
+turing on
 ```
 
 #### Inactivate:
 
 ```
-turling off
+turing off
 ```
 
-To prevent causing chaos, Turling Robot only available for the chats that has been activated.
+To prevent causing chaos, Turing Robot only available for the chats that has been activated.
 
 #### Show the activated chats:
 
