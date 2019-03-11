@@ -42,6 +42,10 @@ cmd list
 
 After activating, you can control your computer through WeChat.
 
+### **Result**
+
+![](./image/1.jpg)
+
 ## 2. Turing Robot
 
 Based on Turing Robot API (http://www.turingapi.com/), you can turn your WeChat to a chatting robot.
@@ -74,6 +78,10 @@ turing list
 
 When someone talk to you or @you in a group, the robot will reply auto automatically.
 
+### **Result**
+
+![](./image/2.jpg)
+
 ## 3. Analysis friend circle
 
 You can analysis your friend circle by some keywords.
@@ -99,6 +107,10 @@ The result will be saved in:
 * ./data/user/Graph/Signature.html
 * ./data/user/Graph/province.html (The province most of your friends come from)
 
+```
+check friend [-friendname] # will show your friend basic information
+```
+
 ### Analysis your groups:
 
 If you want to analysis the specific group, you can post:
@@ -119,7 +131,41 @@ The result will be saved in:
 - ./data/group/[group_name]/avatar
 - ./data/group/[group_name]/Graph/Relationship.html
 
+```
+check friend [-groupname] # will show your group basic information
+```
 
+### **Result**
+
+![](./image/3.jpg)
+
+## 4. Yolo object detection
+
+Thanks to yolov3 (https://pjreddie.com/darknet/yolo/), the robot has integrated object detection function.
+
+#### Activate:
+
+```
+yolo on
+```
+
+#### Inactivate:
+
+```
+yolo off
+```
+
+#### kill:
+
+```
+yolo kill
+```
+
+After activation, when you get a picture or a video, the yolo will run.
+
+![](./image/4.jpg)
+
+![](./image/5.jpg)
 
 ## Solution
 
