@@ -88,6 +88,7 @@ class User_Friends:
         wordcloud.render(path="./data/user/Graph/Signature.html")
 
     def analysis(self):
+        Dir_init()
         self.statistics()
         self.write_data()
         self.graph()

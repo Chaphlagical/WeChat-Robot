@@ -1,25 +1,21 @@
 # -*- coding:utf-8 -*-
 from wxpy import*
-import cv2
 from analysis.user_analysis import*
 from analysis.group_analysis import *
-import os
 from scripts import hath
+from analysis.CV.cv import *
 
 Dir_init()
 
 bot=Bot(console_qr=False,cache_path=True)
 bot.enable_puid()
-
-me=chat_object(cmd=[],turing=[],turing_key=Tuling(api_key='d9c69eac59ea4dddb70534bb63d0e712'))
-
-#user_group=User_Group(bot,bot.groups().search("FLASH无话不谈交流群")[0])
+me=chat_object(cmd=[],turing=[],yolo=[],turing_key=Tuling(api_key='d9c69eac59ea4dddb70534bb63d0e712'))
 
 
-@bot.register(except_self=False)
+@bot.register(except_self=False,msg_types=TEXT)
 def init(msg):
     print(msg)
-
+    global me
     if 'cmd' in msg.text:
         
         '''
@@ -27,12 +23,11 @@ def init(msg):
         '''
         
         if msg.text == 'cmd on':
-            global me
+            
             
             '''
             Turn on command mode
             If the command mode is already enable, switch the terminal
-            Make should only one friend or group can control the terminal at the same time
             '''
             
             try:
@@ -47,6 +42,10 @@ def init(msg):
                 
         elif msg.text == 'cmd list':
             msg.reply(str(me.cmd))
+            
+        elif msg.text == 'cmd kill':
+            me.cmd=[]
+            msg.reply("kill all cmd")
     
     elif 'turing' in msg.text:
         
@@ -59,7 +58,6 @@ def init(msg):
             '''
             Turn on turing robot mode
             If the turing robot mode is already enable, switch the terminal
-            Make should only one friend or group can control the turing robot at the same time
             '''
             
             try:
@@ -74,8 +72,12 @@ def init(msg):
 
         elif msg.text == 'turing list':
             msg.reply(str(me.turing))
+        
+        elif msg.text == 'turing kill':
+            me.turing=[]
+            msg.reply("kill all the turing process")
     
-    elif msg.is_at and ('蛤' in msg.text or 'hath' in msg.text):
+    elif '蛤' in msg.text or 'hath' in msg.text:
         '''
         Show respect to that elder through key words
         '''
@@ -115,6 +117,59 @@ def init(msg):
         elif 'group' in msg.text:
             user_group=User_Group(bot,bot.groups()[0])
             user_group.check(msg)
+            
+    elif 'yolo' in msg.text:
+        
+        '''
+        Trigger about yolo object detection
+        '''
+    
+        if msg.text == 'yolo on':
+
+            '''
+            Turn on yolo detection mode
+            If the yolo detection mode is already enable, switch the terminal
+            '''
+        
+            try:
+                bot.registered.enable(yolo)
+                if msg.sender not in me.yolo:
+                    me.yolo.append(msg.sender)
+                if msg.sender == bot.self:
+                    me.yolo.append(msg.receiver)
+                msg.reply('yolo enable')
+            except Exception as e:
+                msg.reply(e)
+    
+        elif msg.text == 'yolo list':
+            msg.reply(str(me.yolo))
+            
+        elif msg.text == 'yolo off':
+            try:
+                msg.reply('yolo disable')
+                if msg.receiver in me.yolo:
+                    me.yolo.remove(msg.receiver)
+                if msg.sender in me.yolo:
+                    me.yolo.remove(msg.sender)
+            except Exception as e:
+                msg.reply(e)
+    
+        elif msg.text == 'yolo kill':
+            me.yolo = []
+            msg.reply("kill all cmd")
+    
+
+@bot.register(chats=me.yolo,msg_types=PICTURE or VIDEO,except_self=False)
+def yolo(msg):
+    print(msg)
+    try:
+        if msg.type==PICTURE:
+            Yolo_img(msg)
+        elif msg.type==VIDEO:
+            Yolo_video(msg)
+    except Exception as e:
+        print(e)
+        
 
 
 @bot.register(chats=me.cmd,msg_types=TEXT,except_self=False,enabled=False)

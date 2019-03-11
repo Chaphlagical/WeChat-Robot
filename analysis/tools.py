@@ -2,11 +2,11 @@ import jieba
 import os
 
 class chat_object:
-    def __init__(self,cmd=None,turing=None,turing_key=None):
+    def __init__(self,cmd=None,turing=None,turing_key=None,yolo=None):
         self.cmd=cmd
         self.turing=turing
         self.turing_key=turing_key
-        
+        self.yolo=yolo
 
 def sex_verify(sex):  # turn 1 or 2 or none to gender
     if sex == 1:

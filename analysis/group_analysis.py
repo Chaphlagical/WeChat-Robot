@@ -56,6 +56,7 @@ class User_Group():
         pie.render(path=path+"/Graph/Relationship.html")
 
     def analysis(self):
+        Dir_init()
         self.statistics()
         self.write_data()
         self.graph()
