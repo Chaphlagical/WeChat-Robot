@@ -4,6 +4,7 @@ This is a multifunction WeChat Robot based on wxpy.
 
 ## Installation
 
+* **Ubuntu 18.04/16.04 LTS**
 * **Python 3.x**
 * **pyecharts**
 * **jieba**
@@ -136,6 +137,8 @@ check friend [-groupname] # will show your group basic information
 ```
 
 ### **Result**
+
+my WeChat friends's distribution: [Link](./image/China.html)
 
 ![](./image/3.jpg)
 
