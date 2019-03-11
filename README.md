@@ -45,7 +45,7 @@ After activating, you can control your computer through WeChat.
 
 ### **Result**
 
-![](./image/1.jpg)
+<p align="left"> <img src="./image/1.jpg" alt="chat"  width="270" height="480"><p align="left">
 
 ## 2. Turing Robot
 
@@ -81,7 +81,7 @@ When someone talk to you or @you in a group, the robot will reply auto automatic
 
 ### **Result**
 
-![](./image/2.jpg)
+<p align="left"> <img src="./image/2.jpg" alt="chat"  width="270" height="480"><p align="left">
 
 ## 3. Analysis friend circle
 
@@ -140,8 +140,9 @@ check friend [-groupname] # will show your group basic information
 
 my WeChat friends's distribution ( .html had turn to .png):
 
-<p align="left"> <img src="./image/China.png" alt="Map"  width="250" height="140"> <p align="left">
-<p align="right"> <img src="./image/3.jpg" alt="Map"  width="250" height="140"> <p align="right">
+<p align="left"> <img src="./image/China.png" alt="Map"  width="525" height="300"> <img src="./image/3.jpg" alt="chat"  width="270" height="480"><p align="left">
+
+
 
 
 ## 4. Yolo object detection
@@ -168,9 +169,7 @@ yolo kill
 
 After activation, when you get a picture or a video, the yolo will run.
 
-![](./image/4.jpg)
-
-![](./image/5.jpg)
+<p align="left"> <img src="./image/4.jpg" alt="chat"  width="270" height="480"> <img src="./image/5.jpg" alt="Map"  width="500" height="300"><p align="left">
 
 By the way, thank you Stan Lee.
 
