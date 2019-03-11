@@ -140,9 +140,9 @@ check friend [-groupname] # will show your group basic information
 
 my WeChat friends's distribution ( .html had turn to .png):
 
-![](./image/China.png)
+<p align="left"> <img src="./image/China.png" alt="Map"  width="250" height="140"> <p align="left">
+<p align="right"> <img src="./image/3.jpg" alt="Map"  width="250" height="140"> <p align="right">
 
-![](./image/3.jpg)
 
 ## 4. Yolo object detection
 
