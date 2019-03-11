@@ -138,7 +138,9 @@ check friend [-groupname] # will show your group basic information
 
 ### **Result**
 
-my WeChat friends's distribution: [Link](./image/China.html)
+my WeChat friends's distribution ( .html had turn to .png):
+
+![](./image/China.png)
 
 ![](./image/3.jpg)
 
@@ -169,6 +171,8 @@ After activation, when you get a picture or a video, the yolo will run.
 ![](./image/4.jpg)
 
 ![](./image/5.jpg)
+
+By the way, thank you Stan Lee.
 
 ## Solution
 
