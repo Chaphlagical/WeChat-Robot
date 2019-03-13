@@ -7,6 +7,7 @@ class chat_object:
         self.turing=turing
         self.turing_key=turing_key
         self.yolo=yolo
+        self.yolo_num=0
 
 def sex_verify(sex):  # turn 1 or 2 or none to gender
     if sex == 1:
@@ -82,3 +83,4 @@ def city_in_province(bot,province):
             else:
                 city[person.city+'市']=1
     return city
+

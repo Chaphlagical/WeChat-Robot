@@ -8,6 +8,7 @@ This is a multifunction WeChat Robot based on wxpy.
 * **Python 3.x**
 * **pyecharts**
 * **jieba**
+* **OpenCV  (version>=3)**
 
 ## Introdution
 
@@ -93,12 +94,6 @@ You can analysis your friend circle by some keywords.
 analysis friends
 ```
 
-or
-
-```
-friends analysis
-```
-
 The result will be saved in:
 
 * ./data/user/user_friends_data.md
@@ -117,7 +112,7 @@ check friend [-friendname] # will show your friend basic information
 If you want to analysis the specific group, you can post:
 
 ```
-analysis [-group_name]
+analysis group [-group_name]
 ```
 
 If you want to analysis all the groups, you can post:
@@ -133,7 +128,7 @@ The result will be saved in:
 - ./data/group/[group_name]/Graph/Relationship.html
 
 ```
-check friend [-groupname] # will show your group basic information
+check group [-groupname] # will show your group basic information
 ```
 
 ### **Result**
@@ -141,6 +136,7 @@ check friend [-groupname] # will show your group basic information
 my WeChat friends's distribution ( .html had turn to .png):
 
 <p align="left"> <img src="./image/China.png" alt="Map"  width="525" height="300"> <img src="./image/3.jpg" alt="chat"  width="270" height="480"><p align="left">
+
 
 
 
@@ -195,3 +191,7 @@ value = '%s="%s"' % (name, value.encode('utf-8'))
 ## Notice
 
 Everyone can through keywords to control your WeChat robot, so be cautious about your privacy.
+
+## Update
+
+#### **3/13/2019** Simplify the structure
