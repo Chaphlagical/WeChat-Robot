@@ -1,6 +1,7 @@
 from wxpy import*
 from analysis.CV.cv import *
 
+
 def yolo_on(*var):
     """
     Turn on yolo object detection mode
@@ -54,6 +55,12 @@ def yolo_kill(*var):
 
 
 def yolo_mode(msg, me):
+    """
+    Yolo mode callback function
+    :param msg: Message
+    :param me: custom class me
+    :return: None
+    """
     if me.yolo_num == 0:
         try:
             me.yolo_num = 1

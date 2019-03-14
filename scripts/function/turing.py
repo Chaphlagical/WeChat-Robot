@@ -35,6 +35,13 @@ def turing_kill(*var):  # var=(bot, msg, me, cmd, turing_robot)
     
     
 def turing_mode(msg, me, bot):
+    """
+    Turing mode callback function
+    :param msg: Message
+    :param me: custom class me
+    :param bot: bot
+    :return: None
+    """
     if msg.text == 'turing off':
         try:
             msg.reply('turing disable')

@@ -1,5 +1,6 @@
 import os
 
+
 def cmd_on(*var):
     """
     Turn on command mode.
@@ -39,6 +40,12 @@ def cmd_kill(*var):
 
 
 def cmd_mode(msg,me):
+    """
+    cmd mode callback function
+    :param msg: Message
+    :param me: custom class me
+    :return: None
+    """
     if msg.text == 'cmd off':
         try:
             msg.reply('cmd disable')

@@ -8,5 +8,5 @@ words = ['苟立国家生死以，岂因祸福避趋之', '闷声发大财', 'to
 
 
 def hath():
-    index = random.randint(0,len(words)-1)
+    index = random.randint(0, len(words)-1)
     return words[index]

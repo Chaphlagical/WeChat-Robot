@@ -4,7 +4,6 @@ from pyecharts import WordCloud
 from analysis.tools import *
 
 
-
 class User_Friends:
     def __init__(self, bot):
         self.bot = bot
