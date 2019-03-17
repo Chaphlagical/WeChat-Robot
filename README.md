@@ -202,7 +202,7 @@ Actually you can put your own super hero photo in ./analysis/CV/PRNet/Hero/mater
 
 ## 6、Movie download_link
 
-Using requests, urllib and re, obtaining the url of the movie resource automatically
+Using requests, urllib and re, obtaining the url of the movie resource from https://www.ygdy8.com/ automatically
 
 You just need to post:
 
