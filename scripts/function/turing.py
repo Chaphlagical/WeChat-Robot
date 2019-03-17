@@ -42,6 +42,7 @@ def turing_mode(msg, me, bot):
     :param bot: bot
     :return: None
     """
+    
     if msg.text == 'turing off':
         try:
             msg.reply('turing disable')

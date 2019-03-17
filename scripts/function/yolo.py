@@ -38,8 +38,8 @@ def yolo_off(*var):
         var[1].reply('yolo disable')
         if var[1].receiver in var[2].yolo:
             var[2].yolo.remove(var[1].receiver)
-        if var[1].sender in var[5].yolo:
-            var[5].yolo.remove(var[1].sender)
+        if var[1].sender in var[2].yolo:
+            var[2].yolo.remove(var[1].sender)
     except Exception as e:
         var[1].reply(e)
 
@@ -51,7 +51,7 @@ def yolo_kill(*var):
     :return: None
     """
     var[2].yolo = []
-    var[1].reply("kill all cmd")
+    var[1].reply("kill all yolo")
 
 
 def yolo_mode(msg, me):
@@ -66,8 +66,6 @@ def yolo_mode(msg, me):
             me.yolo_num = 1
             if msg.type == PICTURE:
                 Yolo_img(msg)
-            elif msg.type == VIDEO:
-                Yolo_video(msg)
             me.yolo_num = 0
         except Exception as e:
             me.yolo_num = 0

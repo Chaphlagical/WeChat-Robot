@@ -9,6 +9,7 @@ This is a multifunction WeChat Robot based on wxpy.
 * **pyecharts**
 * **jieba**
 * **OpenCV  (version>=3)**
+* **Keras**
 
 ## Introdution
 
@@ -168,6 +169,50 @@ After activation, when you get a picture or a video, the yolo will run.
 <p align="left"> <img src="./image/4.jpg" alt="chat"  width="270" height="480"> <img src="./image/5.jpg" alt="Map"  width="500" height="300"><p align="left">
 
 By the way, thank you Stan Lee.
+
+## 5. Shazam !
+
+Using PRNet (ECCV2018 https://github.com/YadiraF/PRNet) to achieve face swapping, Everyone can be Shazam !
+
+ #### Activate:
+
+```
+hero on
+```
+
+#### Inactivate:
+
+```
+hero off
+```
+
+#### kill:
+
+```
+hero kill
+```
+
+After activation, you just need to post shazam after post a picture first.
+
+The result like this:
+
+<p align="left"> <img src="./image/6.jpg" alt="chat"  width="270" height="480"> <p align="left">
+
+Actually you can put your own super hero photo in ./analysis/CV/PRNet/Hero/material/, post the name after posting a photo, you can also get result. 
+
+## 6、Movie download_link
+
+Using requests, urllib and re, obtaining the url of the movie resource automatically
+
+You just need to post:
+
+```
+movie [-movie_name]
+```
+
+and you will get all the url. 
+
+<p align="left"> <img src="./image/7.jpg" alt="chat"  width="270" height="480"> <p align="left">
 
 ## Solution
 

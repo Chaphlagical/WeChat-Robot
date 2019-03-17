@@ -6,12 +6,14 @@ class chat_object:
     """
     The class content operation terminal and param
     """
-    def __init__(self, cmd=None, turing=None, turing_key=None, yolo=None):
+    def __init__(self, cmd=None, turing=None, turing_key=None, yolo=None, turn_hero=None):
         self.cmd = cmd
         self.turing = turing
         self.turing_key = turing_key
         self.yolo = yolo
         self.yolo_num = 0
+        self.turn_hero=turn_hero
+        self.hero_num = 0
 
 
 def sex_verify(sex):  # turn 1 or 2 or none to gender
