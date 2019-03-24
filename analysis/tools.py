@@ -1,5 +1,22 @@
 import jieba
 import os
+import argparse
+
+
+GUI_Mode={'on':True,'off':False}
+QR_Mode={'on':False,'off':True}
+
+
+def parse_args():
+    """Parse input arguments."""
+    parser = argparse.ArgumentParser(description='WeChat Robot Init')
+    parser.add_argument('--gui', dest='gui', help='GUI to use [on off]',
+                        choices=GUI_Mode.keys(), default='on')
+    parser.add_argument('--qr', dest='QR_Code', help='QR_Code to use [on off]',
+                        choices=QR_Mode.keys(), default='on')
+    args = parser.parse_args()
+
+    return args
 
 
 class chat_object:

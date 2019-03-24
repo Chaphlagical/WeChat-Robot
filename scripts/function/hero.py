@@ -53,7 +53,7 @@ def hero_mode(msg, me):
                         msg.reply('hero disable')
                         if msg.receiver in me.turn_hero:
                             me.turn_hero.remove(msg.receiver)
-                        if msg.sender in me.turing:
+                        if msg.sender in me.turn_hero:
                             me.turn_hero.remove(msg.sender)
                     except Exception as e:
                         msg.reply(e)

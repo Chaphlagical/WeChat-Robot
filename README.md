@@ -214,6 +214,13 @@ and you will get all the url.
 
 <p align="left"> <img src="./image/7.jpg" alt="chat"  width="270" height="480"> <p align="left">
 
+## 7、PC Wechat
+
+
+<p align="left"> <img src="./image/GUI.png" alt="chat"  width="500" height="600"> <p align="left">
+
+Supporting sending message, receiving message and saving chats history.
+
 ## Solution
 
 ### 1.  Sometimes you may not be able to download file named after  Chinese characters. 
